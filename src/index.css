@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --touch-target-min: 48px;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  /* Universal visible high-visibility focus indicator for switch & keyboard accessibility */
+  *:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 3px !important;
+    border-radius: 6px;
+  }
+}
+
+/* Accessibility root modes */
+html.font-normal { font-size: 16px; }
+html.font-large { font-size: 18px; }
+html.font-xlarge { font-size: 20px; }
+html.font-huge { font-size: 22px; }
+
+/* Spacing variations */
+body.spacing-relaxed {
+  letter-spacing: 0.025em;
+  line-height: 1.75;
+}
+body.spacing-wide {
+  letter-spacing: 0.05em;
+  line-height: 2;
+}
+
+/* High Contrast Mode (WCAG AAA compliant: stark borders, pure blacks & whites or rich darks) */
+html.high-contrast {
+  --tw-border-opacity: 1;
+}
+
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .bg-white,
+html.high-contrast .bg-slate-50,
+html.high-contrast .bg-slate-100,
+html.high-contrast .bg-gray-50,
+html.high-contrast .bg-blue-50,
+html.high-contrast .bg-emerald-50,
+html.high-contrast .bg-amber-50 {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #facc15 !important;
+}
+
+html.high-contrast .text-slate-600,
+html.high-contrast .text-slate-500,
+html.high-contrast .text-gray-600,
+html.high-contrast .text-gray-500 {
+  color: #f1f5f9 !important;
+}
+
+html.high-contrast button,
+html.high-contrast a,
+html.high-contrast input,
+html.high-contrast select,
+html.high-contrast textarea {
+  border-width: 2px !important;
+  border-color: #ffffff !important;
+}
+
+html.high-contrast *:focus-visible {
+  outline: 4px solid #facc15 !important;
+  outline-offset: 4px !important;
+}
+
+/* Reduced Motion Mode */
+html.reduced-motion *,
+html.reduced-motion *::before,
+html.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Button size modifiers for motor accessibility */
+html.btn-size-large button,
+html.btn-size-large .btn-touch {
+  min-height: 56px !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  font-size: 1.05em !important;
+}
+
+html.btn-size-huge button,
+html.btn-size-huge .btn-touch {
+  min-height: 64px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  font-size: 1.15em !important;
+}
+
+/* Touch targets enforce 48px minimum */
+button,
+a,
+input,
+select,
+textarea,
+[role="button"] {
+  min-height: 48px;
+  touch-action: manipulation;
+}

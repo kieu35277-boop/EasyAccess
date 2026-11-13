@@ -1,0 +1,10 @@
+{
+  "name": "Remix EasyAccess – Trợ lý công nghệ thông minh",
+  "description": "Nền tảng hỗ trợ người khuyết tật chi trên tiếp cận thông tin, hướng dẫn thiết bị và điều khiển IoT thông minh với trợ lý AI và khả năng trợ năng cao cấp.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

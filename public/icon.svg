@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="512" height="256" rx="112" fill="url(#glowGrad)" />
+  
+  <!-- Accessibility & Smart Assist Symbol -->
+  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer signal waves (IoT & Voice) -->
+    <path d="M128 170 A150 150 0 0 1 384 170" stroke-dasharray="2 0" opacity="0.85" />
+    <path d="M168 210 A100 100 0 0 1 344 210" opacity="0.95" />
+    
+    <!-- Central Accessibility Human with open arms/empowerment -->
+    <circle cx="256" cy="230" r="32" fill="#ffffff" />
+    <path d="M180 300 C210 275 302 275 332 300" stroke-width="28" />
+    <path d="M256 295 L256 410" stroke-width="28" />
+    <path d="M200 440 L256 390 L312 440" stroke-width="28" />
+    
+    <!-- Smart Node / Sparkle -->
+    <circle cx="360" cy="180" r="14" fill="#facc15" stroke="#ffffff" stroke-width="6" />
+  </g>
+</svg>
